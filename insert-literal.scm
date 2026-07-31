@@ -33,7 +33,7 @@
           ((and letter (is? (string-append "C-" (string letter))))
             (insert-byte (- (char->integer letter) 96)))
           (ch (helix.static.insert_string (string ch)))
-          (else (void)))))))
+          (else void))))))
 
 ;;@doc
 ;; Return the list of current auto-pairing characters.
@@ -59,4 +59,4 @@
           ((and ch (member ch (current-pair-chars)))
             (helix.static.insert_string (string ch)))
           (ch (helix.static.insert_char ch))
-          (else (void)))))))
+          (else void))))))
